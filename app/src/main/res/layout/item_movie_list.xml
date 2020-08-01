@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="callback"
+            type="com.example.mvvmlearning.data.clickListner.ItemClickListener" />
+
+        <variable
+            name="model"
+            type="com.example.mvvmlearning.data.model.MovieSeries" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:onClick="@{() -> callback.onItemClickListener(model)}"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivPosterThumb"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_margin="8dp"
+                    app:posterPath="@{model.poster}"
+                    android:contentDescription="@string/poster_thumb"
+                    app:layout_constraintDimensionRatio="H,16:9"
+                    tools:background="#000" />
+
+                <TextView
+                    android:id="@+id/tvMovieName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@{model.title}"
+                    android:layout_toEndOf="@+id/ivPosterThumb"
+                    android:layout_toRightOf="@+id/ivPosterThumb"
+                    android:textSize="15sp"
+                    tools:text="The Shawshank Redemption The Shawshank Redemption The Shawshank Redemption" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

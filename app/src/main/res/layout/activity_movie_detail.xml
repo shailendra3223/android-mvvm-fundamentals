@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.detailScreen.MovieDetailActivity">
+
+        <ImageView
+            android:id="@+id/ivPosterDetails"
+            android:layout_width="160dp"
+            android:layout_height="200dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/main_poster"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMovieName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivPosterDetails"
+            app:layout_constraintTop_toTopOf="@id/ivPosterDetails"
+            tools:text="The Shawshank Redemption" />
+
+        <TextView
+            android:id="@+id/tvMovieYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@+id/ivPosterDetails"
+            app:layout_constraintTop_toBottomOf="@id/tvMovieName"
+            tools:text="1994" />
+
+        <TextView
+            android:id="@+id/tvMoviePlot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ivPosterDetails"
+            app:layout_constraintTop_toBottomOf="@id/ivPosterDetails"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Chronicles the experiences of a formerly successful banker as a prisoner in the gloomy jailhouse of Shawshank after being found guilty of a crime he did not commit. The film portrays the man's unique way of dealing with his new, torturous life; along the way he befriends a number of fellow prisoners, most notably a wise long-term inmate named Red." />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
