@@ -1,19 +1,15 @@
 package com.example.mvvmlearning.ui.mainScreen;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.mvvmlearning.R;
 import com.example.mvvmlearning.data.adapter.MovieAdapter;
 import com.example.mvvmlearning.data.clickListner.ItemClickListener;
-import com.example.mvvmlearning.data.model.MovieListModel;
 import com.example.mvvmlearning.data.model.MovieSeries;
 import com.example.mvvmlearning.databinding.ActivityMainBinding;
 
