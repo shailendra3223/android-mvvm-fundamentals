@@ -22,6 +22,11 @@ public class HomeActivity extends AppCompatActivity implements ItemClickListener
     private static final String TAG = "HomeActivity";
     private MovieAdapter adapter;
 
+    //TODO: 1 Add Loader
+    //TODO: 2 Add detail screen
+    //TODO: 3 handle internet connection
+    //TODO: 4 Take input from user
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
